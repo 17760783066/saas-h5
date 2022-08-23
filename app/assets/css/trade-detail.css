@@ -1,0 +1,35 @@
+.detail-page .img {
+  position: absolute;
+  width: 100vw;
+  height: 30vh;
+  background-image: url("../image/trade/2222.png");
+  background-size: 100%;
+}
+
+.detail-page .top-bar {
+  position: relative;
+  padding: 20vw;
+}
+
+.detail-page .top-bar .wait-pay {
+  color: #FFFFFF;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  transform: translateX(50px);
+}
+
+.detail-page .top-bar .wait-pay .icon-wait {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../image/trade/clock.png");
+  background-size: 15px;
+  transform: translateY(3px);
+}
+
+.detail-page .top-bar .line-second {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+}

@@ -1,0 +1,150 @@
+@import "color";
+@import "mixin";
+.shopping-page {
+    padding: 0 4vw;
+    @include safe-pad-btm(50px);
+    .cart {
+        padding: 4vw;
+        .merchant {
+            background-color: #fff;
+            .adm-checkbox {
+                .adm-checkbox-icon {
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #9a9a9a;
+                    background-color: #f6f6f6;
+                }
+                .adm-checkbox-content {
+                    display: flex;
+                    .icon-merchant {
+                        flex: 0 0 15px;
+                        width: 15px;
+                        height: 15px;
+                        margin-top: 1vw;
+                        background-image: url("../image/merchant/222.png");
+                        background-size: 15px;
+                    }
+                    .name {
+                        flex: 1;
+                        margin-left: 5px;
+                    }
+                    i {
+                        flex: 0 0 1px;
+                        margin-left: 2vw;
+                        @include border-arrow(#3a3737, 6px);
+                    }
+                }
+            }
+        }
+
+        .adm-swipe-action {
+            .adm-swipe-action-track {
+                .adm-swipe-action-content {
+                    .product {
+                        margin-top: 6vw;
+                        line-height: 2;
+                        display: flex;
+                        .adm-checkbox {
+                            .adm-checkbox-icon {
+                                margin-top: -35px;
+                                width: 20px;
+                                height: 20px;
+                                border: 1px solid #9a9a9a;
+                                background-color: #f6f6f6;
+                            }
+                        }
+                        img {
+                            margin-left: 1vw;
+                            flex: 0 0 63px;
+                            width: 63px;
+                            height: 63px;
+                            border-radius: 8px;
+                        }
+                        .right {
+                            margin-left: 1vw;
+                            flex: 1;
+                            p {
+                                font-size: 13px;
+                                font-weight: 400;
+                                line-height: 18px;
+                                margin-left: 2vw;
+                            }
+                            .specs {
+                                display: inline-block;
+                                background-color: #f6f6f6;
+                                border-radius: 8px;
+                                margin-left: 2vw;
+                                .params {
+                                    display: flex;
+                                    .param {
+                                        display: flex;
+                                        color: #9a9a9a;
+                                        .label {
+                                            margin-left: 2vw;
+                                        }
+                                        .value {
+                                        }
+                                    }
+                                    .arrows {
+                                        margin-left: 10px;
+                                        @include border-arrow(#9a9a9a, 6px);
+                                    }
+                                }
+                            }
+                            .down {
+                                .price {
+                                    margin-left: 2vw;
+                                    color: #d3040f;
+                                    font-weight: 700;
+                                    font-size: 14px;
+                                    em {
+                                    }
+                                }
+                                .count {
+                                    .product-step {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .adm-swipe-action-actions-right {
+                    background-color: #d3040f;
+                    color: #f6f6f6;
+                }
+            }
+        }
+    }
+    .btm-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        padding: 7.5px 15px;
+        background: #fff;
+        box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+        display: flex;
+        .price {
+            flex: 1;
+            color: red;
+        }
+        .btns {
+            flex: 0 0 210px;
+            margin-top: 2.5px;
+
+            .account-btn {
+                float: right;
+                width: 100px;
+                height: 30px;
+                border-radius: 20px;
+                text-align: center;
+                line-height: 30px;
+                font-size: 15px;
+                font-weight: 500;
+                background: #ffe60f;
+                color: #333333;
+            }
+        }
+    }
+}

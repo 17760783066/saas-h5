@@ -1,0 +1,316 @@
+@import "color";
+@import "mixin";
+
+.home-page {
+    .top-bar {
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        padding: 10px ;
+        background: #fff;
+        box-shadow: (0 1px 8px rgba($color: #000000, $alpha: 0.1));
+
+        .location {
+            flex: 0 0 90px;
+            background: url("../image/home/cate/Group521.png") center left no-repeat;
+            background-size: 13px;
+            padding-left: 20px;
+
+            p {
+                float: left;
+                width: 30px;
+                line-height: 30px;
+                height: 21px;
+                margin: 0 3px;
+                overflow: hidden;
+                margin-left: -1px;
+            }
+
+            .icon {
+                float: left;
+                width: 10px;
+                margin-top: 8px;
+                transition: all 0.4s;
+                margin-left: -1px;
+            }
+
+            .rotate {
+                margin-top: 10px;
+                transform: rotate(-90deg);
+            }
+        }
+        .msg {
+            position: relative;
+            flex: 0 0 24px;
+            width: 24px;
+            height: 24px;
+            margin-top: 3px;
+
+            i {
+                display: block;
+                width: 24px;
+                height: 24px;
+                background: url("../image/common/Vector.png") center no-repeat;
+                background-size: contain;
+            }
+
+            .dot {
+                position: absolute;
+                right: 2px;
+                top: -3px;
+                width: 8px;
+                height: 8px;
+                border: 1px solid #fff;
+                background: #d30001;
+                border-radius: 50%;
+            }
+        }
+    }
+    .cases {
+        ul {
+            li {
+                padding: 10px;
+                .cover {
+                    width: 92vw;
+                    height: 47vw;
+                    border-radius: 15px 15px 0 0;
+                }
+                .s {
+                    background-color: #fff;
+                    border-radius: 0 0 15px 15px;
+                    .title {
+                        font-weight: 500;
+                        padding-top: 12px;
+                        font-size: 17px;
+                        color: #333333;
+                        letter-spacing: 1.5px; //字符间距为1.5个像素
+                        line-height: 24px; //行高
+                        @include multi-line();
+                    }
+                    .cates {
+                        span {
+                            display: inline-block;
+                            height: 20px;
+                            max-width: 50px;
+                            overflow: hidden;
+                            padding: 0 3px;
+                            border: 1px solid #ae640b;
+                            border-radius: 3px;
+                            font-size: 13.5px;
+                            color: #ae640b;
+                            transform: scale(0.75) translateX(-12.5%);
+                        }
+                    }
+
+                    .descr {
+                        font-weight: 400;
+                        margin-top: 10px;
+                        font-size: 12px;
+                        color: #9a9a9a;
+                        letter-spacing: 1.06px;
+                        line-height: 18px;
+                        @include multi-line();
+                    }
+                    .bar {
+                        margin-top: 15px;
+                        padding-bottom: 12px;
+                        width: 100%;
+                        height: 29px;
+                        display: flex;
+                        @include border-btm(#d8d8d8, false);
+
+                        .author {
+                            flex: 1;
+                            display: flex;
+
+                            img {
+                                flex: 0 0 17px;
+                                width: 17px;
+                                height: 17px;
+                                border-radius: 50%;
+                            }
+
+                            .name {
+                                flex: 1;
+                                line-height: 17px;
+                                font-size: 12px;
+                                color: #4a4a4a;
+                                letter-spacing: 1.06px;
+                                @include multi-line(1);
+                            }
+                        }
+
+                        .stats {
+                            flex: 0 0 105px;
+
+                            .stat {
+                                float: left;
+                                width: 50px;
+                                height: 17px;
+                                padding-left: 17px;
+                                line-height: 17px;
+                                font-size: 12px;
+                                color: #9a9a9a;
+                                letter-spacing: 1.06px;
+                            }
+
+                            .favor {
+                                @extend .stat;
+                                background: url("../image/common/icon_favor.png") left center no-repeat;
+                                background-size: 12px;
+                            }
+
+                            .favored {
+                                @extend .stat;
+                                background: url("../image/common/icon_favored.png") left center no-repeat;
+                                background-size: 12px;
+                            }
+
+                            .star {
+                                @extend .stat;
+                                background: url("../image/common/icon_collect.png") left center no-repeat;
+                                background-size: 11px;
+                            }
+                            .stared {
+                                @extend .stat;
+                                background: url("../image/common/star.png") left center no-repeat;
+                                background-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .waterfall-albums {
+        display: flex;
+        flex-wrap: wrap;
+        column-count: 2;
+        column-gap: 10px;
+        padding: 0 calc(4vw - 10px) 0 4vw;
+        .wh {
+            width: 45vw;
+            height: auto;
+        }
+
+        li {
+            position: relative;
+            margin-top: 10px;
+
+            img {
+                @extend .wh;
+                border-radius: 4px;
+            }
+
+            .num {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                height: 18px;
+                padding: 2px 7px;
+                font-size: 12px;
+                line-height: 14px;
+                color: #fff;
+                background: rgba($color: #000000, $alpha: 0.6);
+                border-radius: 7px;
+            }
+            .author {
+                position: absolute;
+                background: rgba($color: #000000, $alpha: 0.6);
+                left: 10px;
+                bottom: 10px;
+                height: 18px;
+                border-radius: 100px;
+                padding: 0 7px 0 0;
+                display: flex;
+                img {
+                    border-radius: 50%;
+                    width: 18px;
+                    height: 18px;
+                }
+                .name {
+                    font-size: 12px;
+                    color: #fff;
+                }
+            }
+            &:nth-child(3n + 0) {
+                margin-right: 0;
+            }
+        }
+    }
+    .waterfall-articles{
+        display: flex;
+        flex-wrap: wrap;
+        column-count: 2;
+        column-gap: 10px;
+        padding: 0 calc(4vw - 10px) 0 4vw;
+        .wh {
+            width: 45vw;
+            height: auto;
+        }
+        li {
+            position: relative;
+            margin-top: 10px;
+            @extend .wh;
+            img {
+                @extend .wh;
+                border-radius: 4px;
+            }
+            .title{
+                @extend .wh;
+            }
+            .a {
+                display: flex;
+                flex: 1;
+
+
+                .author {
+                    flex: 1;
+                    display: flex;
+
+                    img {
+                        flex: 0 0 17px;
+                        width: 17px;
+                        height: 17px;
+                        border-radius: 50%;
+                    }
+
+                    .name {
+                        flex: 1;
+                        line-height: 17px;
+                        font-size: 12px;
+                        color: #4a4a4a;
+                        letter-spacing: 1.06px;
+                        @include multi-line(1);
+                    }
+                }
+                .stats {
+                    flex: 0 0 55px;
+
+                    .stat {
+                        float: left;
+                        width: 50px;
+                        height: 17px;
+                        padding-left: 17px;
+                        line-height: 17px;
+                        font-size: 12px;
+                        color: #9a9a9a;
+                        letter-spacing: 1.06px;
+                    }
+                    .star {
+                        @extend .stat;
+                        background: url("../image/common/icon_collect.png") left center no-repeat;
+                        background-size: 11px;
+                    }
+                    .stared {
+                        @extend .stat;
+                        background: url("../image/common/star.png") left center no-repeat;
+                        background-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}

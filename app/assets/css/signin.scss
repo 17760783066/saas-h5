@@ -1,0 +1,59 @@
+@import "color";
+@import "variables";
+@import "mixin";
+
+.signin-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    .signin-bg {
+        padding: 0 9vw;
+        .signin-signup {
+            //登录/注册
+            font-size: 25px;
+            padding-top: 35px;
+        }
+        .signin {
+            font-size: 14px;
+            .input-mobile {
+                //手机号
+                margin-top: 79px;
+                height: 40px;
+                --placeholder-color: #b8becc;
+                background-color: #f0f2f5;
+                border-radius: 28px;
+                padding: 0 9vw;
+            }
+            .signin-code-get {
+                display: flex;
+                .input-code {
+                    flex: 70%;
+                    height: 40px;
+                    margin-top: 26px;
+                    --placeholder-color: #b8becc;
+                    background-color: #f0f2f5;
+                    border-radius: 28px 0 0 28px;
+                    padding: 0 9vw;
+                }
+                .code {
+                    margin-top: 26px;
+                    text-align: center;
+                    padding: 10px 0;
+                    flex: 30%;
+                    color: #ae640b;
+                    background-color: #f0f2f5;
+                    border-radius: 0 28px 28px 0;
+                }
+            }
+            .signin-btn-line {
+                .singin-btn {
+                    width: 75vw;
+                    background-color: #ffe000;
+                    margin-top: 70px;
+                    font-size: 16px;
+                    border-radius: 28px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,245 @@
+@import "color";
+@import "mixin";
+@import "variables";
+
+.order-page {
+    .top-bar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        height: 40px;
+        display: flex;
+        text-align: center;
+        z-index: 1;
+
+        .title {
+            width: 100%;
+            line-height: 38px;
+            letter-spacing: 0;
+            display: inline-block;
+            box-sizing: border-box;
+
+            span {
+                padding: 0 2vw;
+                height: 15px;
+                width: 100%;
+                font-size: 14px;
+                font-family: PingFang, PingFang-SC;
+                text-align: left;
+                color: #4a4a4a;
+                line-height: 30px;
+            }
+        }
+        .menu {
+            width: 20%;
+        }
+
+        .cur {
+            color: $primary-color;
+
+            .title {
+                border-bottom: 3px solid $primary-color;
+            }
+        }
+    }
+    .trade-list {
+        padding-top: 50px;
+        .trade-detail {
+            background: #ffffff;
+            .title-bar {
+                height: 30px;
+                padding: 0 15px;
+                display: flex;
+                justify-content: space-between;
+                .detail {
+                    display: flex;
+                    .merchant-logo {
+                        margin: 5px 10px 5px 0;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                    }
+
+                    .merchant-name {
+                        height: 30px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-align: left;
+                        color: #4a4a4a;
+                        line-height: 30px;
+                        letter-spacing: -1px;
+                        @include border-arrow($color: #4a4a4a, $top: 11px, $size: 7px);
+                    }
+                }
+
+                .trade-type {
+                    font-size: 15px;
+                    height: 30px;
+                    font-family: PingFangSC, PingFangSC-Regular;
+                    font-weight: 400;
+                    text-align: left;
+                    line-height: 30px;
+                    letter-spacing: -1px;
+                    color: $primary-color;
+                }
+
+                .comp {
+                    flex: 0 0 15px;
+                    color: #7a7a7a;
+                }
+            }
+
+            .product-detail {
+                height: 80px;
+                padding: 10px 15px;
+
+                .inner {
+                    height: 60px;
+                    display: flex;
+
+                    .left {
+                        flex: 0 0 60px;
+                        width: 60px;
+                        height: 60px;
+                        border: 1px solid #efefef;
+                        border-radius: 4px;
+                    }
+
+                    .mid {
+                        flex: 1;
+                        padding: 0 7px;
+
+                        .title {
+                            height: 40px;
+                            font-size: 13px;
+                            font-family: PingFangSC, PingFangSC-Regular;
+                            font-weight: 400;
+                            text-align: justify;
+                            color: #4a4a4a;
+                            line-height: 20px;
+                            @include multi-line();
+                        }
+
+                        .param {
+                            height: 20px;
+
+                            .label {
+                                height: 20px;
+                                font-size: 12px;
+                                font-weight: 400;
+                                text-align: left;
+                                color: #9a9a9a;
+                                line-height: 20px;
+                            }
+
+                            .value {
+                                height: 20px;
+                                font-size: 12px;
+                                font-weight: 400;
+                                text-align: left;
+                                color: #9a9a9a;
+                                line-height: 20px;
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+
+                    .right {
+                        flex: 0 0 80px;
+                        display: grid;
+                        grid-template-rows: 40px 20px;
+                        justify-items: center;
+                        align-items: center;
+
+                        .price {
+                            height: 18px;
+                            font-size: 12px;
+                            font-family: PingFangSC, PingFangSC-Medium;
+                            font-weight: 500;
+                            text-align: justify;
+                            color: #4a4a4a;
+                            line-height: 18px;
+                        }
+
+                        .buy-num {
+                            height: 18px;
+                            font-size: 12px;
+                            font-family: PingFangSC, PingFangSC-Regular;
+                            font-weight: 400;
+                            text-align: justify;
+                            color: #9a9a9a;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+
+            .btns {
+                height: 40px;
+                padding: 5px 15px;
+                line-height: 30px;
+                display: flex;
+                justify-content: flex-end;
+
+                .btn {
+                    width: 80px;
+                    position: relative;
+                    border-radius: 20px;
+                    text-align: center;
+                    margin-left: 10px;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -15px;
+                        left: -40px;
+                        width: 160px;
+                        height: 60px;
+                        border: 1px solid #9a9a9a;
+                        transform: scale(0.5, 0.5);
+                        border-radius: 40px;
+                    }
+                }
+
+                .comment {
+                    color: $primary-color;
+
+                    &:after {
+                        border: 1px solid $primary-color;
+                    }
+                }
+
+                .price {
+                    color: $primary-color;
+
+                    &:after {
+                        border: 1px solid $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .trade-empty {
+        width: 100%;
+        height: 80vh;
+        text-align: center;
+        position: fixed;
+        padding-top: 150px;
+
+        .empty-icon {
+            background-size: contain;
+            width: 240px;
+            height: 240px;
+            display: inline-block;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 16px;
+            margin-top: 15px;
+        }
+    }
+}

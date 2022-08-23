@@ -1,0 +1,166 @@
+@import "color";
+@import "variables";
+@import "mixin";
+
+.address-edit-page {
+    .name {
+        display: flex;
+        padding: 4vw;
+        .nam {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+        .adm-input {
+            padding-left: 10px;
+            background-color: #fff;
+            flex: 3;
+            color: #9a9a9a;
+            font-size: 14px;
+            font-weight: 400;
+            height: 45px;
+            border-radius: 10px;
+            padding: 0 4vw;
+        }
+    }
+    .mobile {
+        display: flex;
+        padding: 4vw;
+
+        .phone {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+        .box {
+            flex: 3;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            height: 45px;
+            border-radius: 10px;
+            padding: 0 4vw;
+            .adm-input {
+                color: #9a9a9a;
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .number {
+                display: flex;
+                color: #9a9a9a;
+                transform: translateY(15px);
+                p {
+                    margin-right: 5vw;
+                }
+                .icon {
+                    transition: all 0.4s;
+                }
+
+                .rotate {
+                    margin-right: 2vw;
+                    margin-top: -10px;
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+    .location {
+        padding: 4vw;
+
+        display: flex;
+        .locat {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+        .box {
+            flex: 3;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            height: 45px;
+            border-radius: 10px;
+            padding: 0 4vw;
+            .adm-input {
+                color: #9a9a9a;
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .img {
+                margin-top: 10px;
+                flex: 0 0 15px;
+                width: 15px;
+                height: 18px;
+                background-image: url("../image/address/location.png");
+                background-size: 15px;
+                transform: translateX(-10px);
+            }
+        }
+    }
+    .locations {
+        padding: 4vw;
+        display: flex;
+        .locat {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .box {
+            flex: 3;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px 4vw 0 4vw;
+            .adm-text-area{
+                color: #9a9a9a;
+                font-size: 14px;
+                font-weight: 400;
+                .adm-text-area-element {
+                }
+            }
+            .img {
+                flex: 0 0 10px;
+                height: 15px;
+                background-image: url("../image/address/1.png");
+                background-size: 10px;
+                transform: translateX(-10px);
+
+            }
+        }
+    }
+    .default {
+        padding: 4vw;
+
+        display: flex;
+        .txt {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .off {
+        }
+    }
+    .btn {
+        position: fixed;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        padding: 7.5px 15px;
+        background: #fff;
+        box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        height: 30px;
+        border-radius: 20px;
+        line-height: 15px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        background: #ffe60f;
+        transform: translateX(25%);
+    }
+}

@@ -1,0 +1,75 @@
+@import "color";
+@import "variables";
+@import "mixin";
+
+.address-page {
+    padding: 0 4vw;
+    background-color: #F2F2F2;
+    height: 100vh;
+    .length {
+        .adm-swipe-action {
+            height: 99px;
+            background-color: #fff;
+            padding: 4vw;
+            border-radius: 10px;
+            margin-top: 10px;
+            .title {
+                display: flex;
+                .img {
+                    width: 10px;
+                    height: 12px;
+                    background-image: url("../image/address/location.png");
+                    background-size: 10px;
+                }
+                .code {
+                    margin-left: 10px;
+                    color: #9a9a9a;
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
+
+            .detail {
+                font-size: 16px;
+                font-weight: 500;
+                img {
+                    float: right;
+                    width: 16px;
+                    height: 17px;
+                    background-image: url("../image/address/Vector.png");
+                    background-size: 16px;
+                }
+            }
+            .name {
+                color: #9a9a9a;
+                font-size: 13px;
+                font-weight: 400;
+            }
+            .tit {
+                transform: translateY(-425%);
+                float: right;
+                .adm-tag{
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .btn {
+        position: fixed;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        padding: 7.5px 15px;
+        box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        height: 30px;
+        border-radius: 20px;
+        line-height: 15px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        background: #ffe60f;
+        transform: translateX(25%);
+    }
+}

@@ -1,0 +1,91 @@
+@import "color";
+
+@mixin multi-line($line: 2) {
+  -webkit-line-clamp: $line;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  white-space: normal !important;
+  width: 100%;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+@mixin clearfix($height:0) {
+  height: $height;
+  clear: both;
+  content: " ";
+  display: block;
+  overflow: hidden
+}
+
+@mixin border-arrow($color:$primary-color, $top:20px, $size:7px, $right:0) {
+  position: relative;
+  padding-right: calc(#{$size} * 1.6);
+
+  &:after {
+    position: absolute;
+    top: $top;
+    width: $size;
+    height: $size;
+    right: $right;
+    border-right: 1px solid $color;
+    border-bottom: 1px solid $color;
+    transform: rotate(-45deg);
+    content: "";
+  }
+
+}
+
+@mixin border-btm($color:$line-grey, $withLastChild:true) {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 200%;
+    left: -50%;
+    top: 100%;
+    border-bottom: 1px solid $color;
+    transform: scale(.5);
+  }
+
+  @if $withLastChild {
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin dot() {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #EB5757;
+    content: '';
+  }
+}
+
+@mixin safe-pad-btm($height: 0) {
+  padding-bottom: calc(#{$height} + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+  padding-bottom: calc(#{$height} + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+}
+
+@mixin safe-height($height: 0) {
+  height: calc(#{$height} + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+  height: calc(#{$height} + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+}
+
+@function px2vw($length, $screen-width: 375px) {
+  @return $length / $screen-width * 100vw;
+}
